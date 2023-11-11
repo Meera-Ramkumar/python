@@ -4,7 +4,17 @@ class Monster:
 	energy=40
 
 	def __init__(self,health,energy):
-		print('The moster was created')
+		print('The monster was created')
+		self.health=health
+		self.health=energy
+	def __len__(self):
+		return self.health
+
+	
+	def __call__(self):
+		return'The monsterwas called'
+	def __add__(self):
+		return self.health + other
 
 	#methods
 	def attack(self,amount):
@@ -19,6 +29,9 @@ class Monster:
 
 		
 
-monster1=Monster()
-monster2=Monster()
-
+monster1=Monster(10,20)
+monster2=Monster(health=50,energy=100)
+print(len(monster1))
+print(monster1.health)
+print(monster2.health)
+print(monster1 + 10)
